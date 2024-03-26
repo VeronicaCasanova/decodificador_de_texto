@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge - Decodificador</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/decodificador.png" type="image/x-icon">
+</head>
+<body>
+    <header class="cabecalho">
+        <img src="assets/decodificador.png" alt="decodificador">
+        <h1>Decodificador</h1>
+        <label class="switch">
+            <input type="checkbox" checked>
+            <span class="slider round" onclick="toggleDarkMode()"></span>
+        </label>
+    </header>
+    <main class="main_container">
+        <section class="container_input">
+            <div class="input">
+                <textarea id="input_texto" oninput="validarInput(this)" placeholder="Digite um texto que deseja criptografar ou descriptografar:"></textarea>
+                <div class="buttons">
+                    <div class="container_btn">
+                        <button onclick="criptografar()" class="btn_criptografar"><strong>Criptografar</strong></button>
+                        <button onclick="descriptografar()" class="btn_descriptografar"><strong>Descriptografar</strong></button>
+                    </div>
+                </div>
+            </div> 
+        </section>
+        <div id="output">
+            <h1>As mensagens serão codificadas aqui:</h1>
+            <div id="output_text" class="output_text">.</div>
+            <div class="image-container">
+                <img id="image" src="assets/Cheshire_animado.gif" alt="cheshire">
+            </div>
+        </div>    
+            <div class="buttons_2">
+                <div class="container_btn2">
+                    <button class="btn_copiar" id="copiar" onclick="copiar()"><strong>Copiar</strong></button>
+                    <button class="btn_limpar" id="limpar" onclick="limpar()"><strong>Limpar</strong></button>
+                </div>
+            </div>    
+    </main>
+    <footer class="rodape">
+        <div class="icons">
+            <a class="image" href="https://github.com/VeronicaCasanova"><img src="./assets/github.png"></a>
+            <a class="image" href="https://www.linkedin.com/in/veronicacasanova/"><img src="./assets/linkedin.png"></a>
+        </div>
+        <h3>Desenvolvido por Veronica Casanova</h3>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

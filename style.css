@@ -1,0 +1,376 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --cor_primaria: rgb(70, 223, 243);
+    --cor_secundaria: rgb(238, 148, 230);
+    --cor_titulo: rgb(3, 56, 70);
+    --cor_darkmode_texto: #ffffff;
+}
+
+body{
+    box-sizing: border-box;
+    background-color: var(--cor_secundaria);/* Cor de fundo padrão */
+    font-family: "Kanit", sans-serif;
+    color: #000; /* Cor do texto padrão */
+    transition: background-color 0.5s, color 0.5s; /* Transição suave */
+    /* height: 100vh; */
+}
+
+/* Estilos para o modo escuro */
+body.dark-mode {
+    background-color: black; /* Cor de fundo do modo escuro */
+    color: #fff; /* Cor do texto do modo escuro */
+}
+
+/* Estilos para o cabeçalho */
+h1 {
+    color: #000; /* Cor do cabeçalho padrão */
+    transition: color 0.5s; /* Transição suave */
+}
+
+/*Botão switch*/
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #cecece;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #080808;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #080808;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para o modo escuro */
+body.dark-mode h1 {
+    color: rgb(70, 223, 243); /* Cor do cabeçalho no modo escuro */
+}
+
+body.dark-mode .input {
+    background-color: #333; /* Cor de fundo do input no modo escuro */
+    color: #fff; /* Cor do texto do input no modo escuro */
+    border: 3px solid magenta;
+}
+
+body.dark-mode #output {
+    background-color: rgb(17, 17, 17); /* Cor de fundo do output no modo escuro */
+    color: rgb(70, 223, 243); /* Cor do texto do output no modo escuro */
+    border: 3px solid magenta;
+}
+
+body.dark-mode #input_texto {
+    background-color: #333; /* Cor de fundo do input no modo escuro */
+    color: #fff; /* Cor do texto do input no modo escuro */
+}
+
+body.dark-mode #output h2 {
+    color: magenta /* Cor do h2 no modo escuro */
+}
+
+body.dark-mode .container_btn button:hover {
+    border: 4px solid var(--cor_primaria);
+}
+
+body.dark-mode .container_btn2 button:hover {
+    border: 4px solid var(--cor_primaria);
+}
+
+body.dark-mode .container_btn button {
+    border: 8px solid var(--cor_secundaria);
+    color: magenta;
+}
+
+body.dark-mode .container_btn2 button {
+    border: 8px solid var(--cor_secundaria);
+    color: magenta;
+}
+
+body.dark-mode .rodape{
+    background-color: #333; /* Cor de fundo do input no modo escuro */
+    color: magenta;
+}
+
+#output .image-container {
+    position: absolute; /* Permite sobrepor a imagem centralizada */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza a imagem */
+}
+
+.cabecalho{
+    display: flex;
+    justify-content: space-between;
+    padding: 1%;
+}
+
+.cabecalho img{
+    max-width: 70px;
+    max-height: 70px;
+    width: auto;
+    height: auto;
+}
+
+.main_container{
+    color: black;
+    padding: 1% 16%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Estilos para o input */
+.input {
+    background-color: #fff; /* Cor de fundo do input padrão */
+    color: #000; /* Cor do texto do input padrão */
+    transition: background-color 0.5s, color 0.5s; /* Transição suave */  
+    border: 3px solid var(--cor_titulo); /* Adiciona uma borda semelhante à do output */
+    border-radius: 20px; /* Arredonda as bordas */
+    padding: 20px; /* Espaçamento interno */
+    width: 550px; /* Define a largura */
+    height: 550px; /* Define a altura */
+}
+
+.container_input{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1% 0 0 7%;
+}
+
+.container_input .input{
+    width: 330px;
+    height: 380px;
+}
+
+#input_texto{
+    width: 250px;
+    height: 285px;
+    font-size: 20px;
+    color: var(--cor_titulo);
+    background: transparent;
+    box-shadow:none;
+    border: none;
+    outline: 0;
+    padding: 50px;
+    text-transform: lowercase;
+}
+
+#output{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza a imagem horizontalmente */
+    justify-content: center; /* Centraliza a imagem verticalmente */
+    border: 3px solid var(--cor_titulo);
+    border-radius: 20px;
+    width: 430px;
+    height: 430px;
+    text-align: center;
+    background-color: white;
+    position: relative; /* Permite posicionar os botões de forma absoluta em relação a esta div */
+}
+
+#output h2{
+    text-align: center;
+    color: var(--cor_titulo);
+} 
+
+#output_text {
+    font-size: 20px;
+    padding: 25px;
+    max-width: 350px;
+    min-height: 325px;  /* Altura mínima para evitar redimensionamentos abruptos */
+    max-height: 325px;  /* Altura máxima para ativar a barra de rolagem vertical */
+    overflow-y: auto;   /* Adiciona barra de rolagem vertical apenas quando necessário */
+    overflow-x: hidden; /* Esconde a barra de rolagem horizontal */
+    white-space: pre-wrap; /* Permite que o conteúdo quebre linhas conforme necessário */
+    word-wrap: break-word; /* Garante que palavras longas sejam quebradas para caber na div */
+}
+
+#output h1{
+    font-size: 22px;
+    text-align: center;
+}
+
+#output img{
+    max-width: 300px;
+    width: auto;
+    height: auto;
+    margin-top: 4%;
+}
+
+.buttons{
+    /* background-color: green; */
+    margin-top: 2%;
+    font-size: 10px;
+}
+
+.buttons_2{
+    position: absolute; /* Permite posicionar os botões de forma absoluta */
+    bottom: 10px; /* Ajuste para deixar um pequeno espaço entre os botões e a borda inferior */
+    display: flex;
+    justify-content: center;
+    left: 73%;
+    transform: translateX(-65%);
+}
+
+.container_btn button{
+    border: 2px solid var(--cor_titulo);
+    border-radius: 10px;
+    text-decoration: none;
+    color: rgb(44, 42, 44);
+    cursor: pointer;
+    width: 130px;
+    height: 40px;
+    margin-left: 7%;
+    margin-top: 4%;
+}
+
+.container_btn2 button{
+    border: 2px solid var(--cor_titulo);
+    border-radius: 10px;
+    text-decoration: none;
+    color: rgb(44, 42, 44);
+    width: 130px;
+    height: 40px;
+    cursor: pointer;
+    margin-right: 20px;  /* Adiciona um espaçamento à direita do botão "Copiar" */
+}
+
+.container_btn2 button:last-child {
+    margin-right: 2;  /* Remove o espaçamento do último botão */
+}
+
+.container_btn button:hover{
+    border: 2px solid #cecece;
+    transition: 0.8s all;
+}
+
+.container_btn2 button:hover{
+    border: 2px solid #cecece;
+    transition: 0.8s all;
+}
+
+.rodape{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2%;
+    margin-top: 65px;
+    background: var(--cor_titulo);
+    color: var(--cor_titulo);
+    font-family: "Dancing Script", cursive;
+    font-size: 30px;
+    color: white;
+}
+
+/*Media queries para tornar o projeto responsivo e adaptável a diferentes tamanhos de tela*/
+
+/* Estilos para telas pequenas (celulares) */
+@media (max-width: 768px) {
+    .main_container {
+        flex-direction: column; /* Altera a direção do flex para coluna */
+        padding: 1% 5%; /* Reduz o padding nas laterais */
+    }
+
+    .container_input {
+        width: 100%; /* Define a largura total */
+        padding: 1% 5%; /* Adapta o padding para tela menor */
+    }
+
+    .container_input .input {
+        width: 100%; /* Define a largura total */
+        height: auto; /* Ajusta a altura automaticamente */
+    }
+
+    #input_texto {
+        width: 100%; /* Define a largura total */
+        height: auto; /* Ajusta a altura automaticamente */
+        font-size: 18px; /* Reduz o tamanho da fonte */
+        padding: 15px; /* Ajusta o padding */
+    }
+
+    #output {
+        width: 100%; /* Define a largura total */
+        height: auto; /* Ajusta a altura automaticamente */
+        padding: 1% 5%; /* Adapta o padding para tela menor */
+    }
+
+    #output_text {
+        min-height: 200px; /* Ajusta a altura mínima */
+        max-height: 200px; /* Ajusta a altura máxima */
+    }
+
+    .buttons_2 {
+        position: static; /* Remove a posição absoluta */
+        margin-top: 20px; /* Ajusta a margem */
+    }
+
+    .container_btn button {
+        width: 100%; /* Define a largura total */
+        margin: 10px 0; /* Ajusta a margem */
+    }
+
+    .container_btn2 button {
+        width: 100%; /* Define a largura total */
+        margin: 10px 0; /* Ajusta a margem */
+    }
+}
+
+
+
