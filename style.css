@@ -389,7 +389,7 @@ body.dark-mode .rodape{
     .buttons_2{
         position: static; /* Remove a posição absoluta */
         margin-top: 20px; /* Ajusta a margem */
-        margin-left: 8px;
+        margin-left: 85px;
     }
 
     .container_btn button{
@@ -398,7 +398,7 @@ body.dark-mode .rodape{
     }
 
     .container_btn2 button{
-        width: 200%; /* Ajusta a largura */
+        width: 180%; /* Ajusta a largura */
         margin: 9px 2px; /* Ajusta a margem */
         margin-right: 30px;
     }
