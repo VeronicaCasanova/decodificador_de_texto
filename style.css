@@ -322,7 +322,7 @@ body.dark-mode .rodape{
 /*Media queries para tornar o projeto responsivo e adaptável a diferentes tamanhos de tela*/
 
 /* Estilos para telas pequenas (celulares) */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     
     .main_container{
         padding: 1% 5%; /* Reduz o padding nas laterais */
