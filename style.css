@@ -322,55 +322,91 @@ body.dark-mode .rodape{
 /*Media queries para tornar o projeto responsivo e adaptável a diferentes tamanhos de tela*/
 
 /* Estilos para telas pequenas (celulares) */
-@media (max-width: 768px) {
-    .main_container {
-        flex-direction: column; /* Altera a direção do flex para coluna */
+@media screen and (max-width: 600px) {
+    
+    .main_container{
         padding: 1% 5%; /* Reduz o padding nas laterais */
+        flex-direction: column; /* Altera a direção do flex para coluna */
+        align-items: center; /* Centraliza os itens verticalmente */
     }
 
-    .container_input {
-        width: 100%; /* Define a largura total */
+    .cabecalho{
+        flex-direction: column; /* Altera a direção do flex para coluna */
+        align-items: center; /* Centraliza os itens verticalmente */
+    }
+
+    .cabecalho img{
+        margin-bottom: 10px; /* Adiciona um espaçamento abaixo da imagem */
+    }
+
+    .container_input{
+        width: 100%; /* Ajusta a largura */
         padding: 1% 5%; /* Adapta o padding para tela menor */
     }
 
-    .container_input .input {
-        width: 100%; /* Define a largura total */
+    .container_input .input{
+        width: 100%; /* Ajusta a largura */
         height: auto; /* Ajusta a altura automaticamente */
     }
 
-    #input_texto {
-        width: 100%; /* Define a largura total */
-        height: auto; /* Ajusta a altura automaticamente */
-        font-size: 18px; /* Reduz o tamanho da fonte */
+    #input_texto{
+        width: 90%; /* Ajusta a largura */
+        height: 95%; /* Ajusta a altura automaticamente */
+        font-size: 16px; /* Reduz o tamanho da fonte */
         padding: 15px; /* Ajusta o padding */
     }
 
-    #output {
-        width: 100%; /* Define a largura total */
+    #output{
+        width: 90%; /* Ajusta a largura */
         height: auto; /* Ajusta a altura automaticamente */
         padding: 1% 5%; /* Adapta o padding para tela menor */
+        margin-top: 160px;
     }
 
     #output_text {
-        min-height: 200px; /* Ajusta a altura mínima */
-        max-height: 200px; /* Ajusta a altura máxima */
+        width: 95%;
+        min-height: 120px; /* Ajusta a altura mínima */
+        max-height: 120px; /* Ajusta a altura máxima */
+        font-size: 16px; /* Reduz o tamanho da fonte */
+        padding: 15px; /* Ajusta o padding */
     }
 
-    .buttons_2 {
+    #output .image-container {
+        position: relative; /* Mantém a posição relativa para posicionar a imagem */
+        width: 100%; /* 100% da largura da div pai */
+        height: auto; /* Altura automática para manter a proporção */
+        text-align: center; /* Centraliza a imagem horizontalmente */
+    }
+
+    .buttons{
+        /* background-color: green; */
+        /* margin-top: 10%; */
+        font-size: 10px;
+        flex-direction: column; /* Alinha os botões verticalmente */
+        align-items: center; /* Centraliza os botões horizontalmente */
+    }
+
+    .buttons_2{
         position: static; /* Remove a posição absoluta */
         margin-top: 20px; /* Ajusta a margem */
+        margin-left: 8px;
     }
 
-    .container_btn button {
-        width: 100%; /* Define a largura total */
-        margin: 10px 0; /* Ajusta a margem */
+    .container_btn button{
+        width: 100%; /* Ajusta a largura */
+        margin: 10px 2px; /* Ajusta a margem */
     }
 
-    .container_btn2 button {
-        width: 100%; /* Define a largura total */
-        margin: 10px 0; /* Ajusta a margem */
+    .container_btn2 button{
+        width: 220%; /* Ajusta a largura */
+        margin: 9px 2px; /* Ajusta a margem */
+        margin-right: 30px;
     }
+
+    .rodape{
+        margin-top: 30px; /* Ajusta a margem */
+        font-size: 20px; /* Reduz o tamanho da fonte */
+    }   
 }
-
 
 
