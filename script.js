@@ -58,7 +58,7 @@ function copiar() {
 // Função para limpar os campos
 function limpar() {
     textInput.value = '';
-    outputDiv.textContent = 'Sua mensagem aparecerá aqui!';  // Reseta o texto do output
+    outputDiv.textContent = '';  // Reseta o texto do output
     restoreImage();
 }
 
