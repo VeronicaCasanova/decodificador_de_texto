@@ -172,6 +172,7 @@ body.dark-mode .rodape{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 }
 
 /* Estilos para o input */
@@ -262,7 +263,7 @@ body.dark-mode .rodape{
 
 .buttons_2{
     position: absolute; /* Permite posicionar os botões de forma absoluta */
-    bottom: 10px; /* Ajuste para deixar um pequeno espaço entre os botões e a borda inferior */
+    bottom: -33px; /* Ajuste para deixar um pequeno espaço entre os botões e a borda inferior */
     display: flex;
     justify-content: center;
     left: 73%;

@@ -1,13 +1,13 @@
-// Função para validar o input
+//Função para validar o input
 function validarInput(input) {
     let textoValidado = input.value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-    input.value = textoValidado;  // Atualiza o valor do input com o texto validado
+    input.value = textoValidado;  
     return textoValidado;
 }
 
 // Elementos do DOM
 let textInput = document.querySelector("#input_texto");
-let outputDiv = document.querySelector("#output_text");  // Alterado para "#output_text"
+let outputDiv = document.querySelector("#output_text");  
 let imageContainer = document.querySelector(".image-container");
 let imageContainer2 = document.querySelector(".image-container2");
 
@@ -33,7 +33,6 @@ function criptografar() {
     var texto = validarInput(textInput);
     var resultCripto = replaceUsingMap(texto, cryptoMap);
     updateOutput(resultCripto);
-    clearImages();
 }
 
 // Função para descriptografar o texto
@@ -41,7 +40,6 @@ function descriptografar() {
     var texto = validarInput(textInput);
     var resultDescripto = replaceUsingMap(texto, decryptMap);
     updateOutput(resultDescripto);
-    clearImages();
 }
 
 // Função auxiliar para substituir texto usando um mapeamento
@@ -54,8 +52,8 @@ function replaceUsingMap(text, map) {
 
 // Função para copiar o texto
 function copiar() {
-    if (outputDiv.textContent.trim() !== '') {  // Verifica se o texto no output não está vazio
-        navigator.clipboard.writeText(outputDiv.textContent);  // Copia o texto do output para a área de transferência
+    if (outputDiv.textContent.trim() !== '') {
+        navigator.clipboard.writeText(outputDiv.textContent);
         alert("Texto copiado!");
     }
 }
@@ -63,46 +61,49 @@ function copiar() {
 // Função para limpar os campos
 function limpar() {
     textInput.value = '';
-    outputDiv.textContent = '';  // Reseta o texto do output
-    restoreImage();
+    outputDiv.textContent = '';  
+    restoreImages();
 }
 
 // Função para atualizar a saída
 function updateOutput(text) {
     outputDiv.textContent = text;
+
+    if (text.trim() === '') {
+        restoreImages();
+    } else {
+        clearImages();
+    }
 }
 
 // Função para limpar imagens
 function clearImages() {
-    imageContainer.innerHTML = '';  // Remove as imagens da div
-    imageContainer2.innerHTML = '';  // Remove as imagens da div
+    imageContainer.innerHTML = '';   
 }
 
 // Função para restaurar a imagem
-function restoreImage() {
+function restoreImages() {
     var body = document.body;
     var imagePath = body.classList.contains("dark-mode") ? "assets/Cheshire_dark.png" : "assets/Cheshire_animado.gif";
-    imageContainer.innerHTML = '<img id="image" src="' + imagePath + '" alt="cheshire">';  // Restaura a imagem na div
+    imageContainer.innerHTML = `<img id="image" src="${imagePath}" alt="cheshire">`;
+    
     var imagePath2 = body.classList.contains("dark-mode") ? "assets/decodificador_dark.png" : "assets/decodificador.png";
-    imageContainer2.innerHTML = '<img id="image2" src="' + imagePath2 + '" alt="decodificador">';  // Restaura a imagem na div
+    imageContainer2.innerHTML = `<img id="image2" src="${imagePath2}" alt="decodificador">`;
 }
 
-// Função para alternar o modo escuro
+// // Função para alternar o modo escuro
 function toggleDarkMode() {
     var body = document.body;
-    var image = document.getElementById("image");
-    var image2 = document.getElementById("image2");
+    // var image = document.getElementById("image");
+    // var image2 = document.getElementById("image2");
     var switchElement = document.querySelector(".switch input");
 
     if (switchElement.checked) {
         body.classList.add("dark-mode");
-        image.src = "assets/Cheshire_dark.png";
-        image2.src = "assets/decodificador_dark.png";
     } else {
         body.classList.remove("dark-mode");
-        image.src = "assets/Cheshire_animado.gif";
-        image2.src = "assets/decodificador.png";
     }
-    restoreImage();  // Restaura a imagem ao alternar o modo
+
+    restoreImages();  
 }
 
