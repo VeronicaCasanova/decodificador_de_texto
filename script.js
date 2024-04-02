@@ -1,6 +1,8 @@
 // Função para validar o input
 function validarInput(input) {
-    return input.value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    let textoValidado = input.value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    input.value = textoValidado;  // Atualiza o valor do input com o texto validado
+    return textoValidado;
 }
 
 // Elementos do DOM
