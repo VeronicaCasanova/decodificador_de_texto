@@ -7,6 +7,7 @@ function validarInput(input) {
 let textInput = document.querySelector("#input_texto");
 let outputDiv = document.querySelector("#output_text");  // Alterado para "#output_text"
 let imageContainer = document.querySelector(".image-container");
+let imageContainer2 = document.querySelector(".image-container2");
 
 // Mapeamento para criptografar e descriptografar
 const cryptoMap = {
@@ -70,27 +71,33 @@ function updateOutput(text) {
 // Função para limpar imagens
 function clearImages() {
     imageContainer.innerHTML = '';  // Remove as imagens da div
+    imageContainer2.innerHTML = '';  // Remove as imagens da div
 }
 
 // Função para restaurar a imagem
 function restoreImage() {
     var body = document.body;
-    var imagePath = body.classList.contains("dark-mode") ? "assets/che.png" : "assets/Cheshire_animado.gif";
+    var imagePath = body.classList.contains("dark-mode") ? "assets/Cheshire_dark.png" : "assets/Cheshire_animado.gif";
     imageContainer.innerHTML = '<img id="image" src="' + imagePath + '" alt="cheshire">';  // Restaura a imagem na div
+    var imagePath2 = body.classList.contains("dark-mode") ? "assets/decodificador_dark.png" : "assets/decodificador.png";
+    imageContainer2.innerHTML = '<img id="image2" src="' + imagePath2 + '" alt="decodificador">';  // Restaura a imagem na div
 }
 
 // Função para alternar o modo escuro
 function toggleDarkMode() {
     var body = document.body;
     var image = document.getElementById("image");
+    var image2 = document.getElementById("image2");
     var switchElement = document.querySelector(".switch input");
 
     if (switchElement.checked) {
         body.classList.add("dark-mode");
-        image.src = "assets/che.png";
+        image.src = "assets/Cheshire_dark.png";
+        image2.src = "assets/decodificador_dark.png";
     } else {
         body.classList.remove("dark-mode");
         image.src = "assets/Cheshire_animado.gif";
+        image2.src = "assets/decodificador.png";
     }
     restoreImage();  // Restaura a imagem ao alternar o modo
 }
