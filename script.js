@@ -52,8 +52,10 @@ function replaceUsingMap(text, map) {
 
 // Função para copiar o texto
 function copiar() {
-    navigator.clipboard.writeText(outputDiv.textContent);  // Copia o texto do output para a área de transferência
-    alert("Texto copiado!");
+    if (outputDiv.textContent.trim() !== '') {  // Verifica se o texto no output não está vazio
+        navigator.clipboard.writeText(outputDiv.textContent);  // Copia o texto do output para a área de transferência
+        alert("Texto copiado!");
+    }
 }
 
 // Função para limpar os campos
