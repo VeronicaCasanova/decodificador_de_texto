@@ -18,6 +18,13 @@ Projeto desafiado pelo curso da Alura, o "Decodificador" é uma aplicação web 
 - **Funções de Criptografia e Descriptografia**: Implementação de funções para criptografar e descriptografar textos usando um mapeamento de caracteres.
 - **Funcionalidades Adicionais**: Implementação de funcionalidades como copiar texto para a área de transferência e alternar entre o modo claro e escuro.
 
+## Restrições de Input
+
+O input da aplicação não permite a utilização de letras maiúsculas e letras acentuadas. Veja exemplos práticos:
+
+- Ao digitar "Gato", aparecerá no input "gato".
+- Ao digitar "cálculo", aparecerá no input "calculo".
+
 ## Como usar
 
 1. **Digite um Texto**: No campo de texto, digite o texto que você deseja criptografar ou descriptografar.
