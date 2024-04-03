@@ -52,7 +52,7 @@ h1 {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: white;
+    background-color: var(--cor_secundaria);
     -webkit-transition: .4s;
     transition: .4s;
   }
@@ -64,7 +64,7 @@ h1 {
     width: 26px;
     left: 4px;
     bottom: 4px;
-    background-color: #cecece;
+    background-color: whitesmoke;
     -webkit-transition: .4s;
     transition: .4s;
   }
@@ -134,13 +134,15 @@ body.dark-mode .container_btn2 button:hover {
 body.dark-mode .container_btn button {
     border: 8px solid var(--cor_secundaria);
     color: magenta;
+    background-color: rgb(236, 234, 234);
 }
 
 body.dark-mode .container_btn2 button {
     border: 8px solid var(--cor_secundaria);
     color: magenta;
+    background-color: rgb(236, 234, 234);
 }
-
+    
 body.dark-mode .rodape{
     background-color: #333; /* Cor de fundo do input no modo escuro */
     color: magenta;
@@ -256,7 +258,6 @@ body.dark-mode .rodape{
 }
 
 .buttons{
-    /* background-color: green; */
     margin-top: 2%;
     font-size: 10px;
 }
@@ -380,8 +381,6 @@ body.dark-mode .rodape{
     }
 
     .buttons{
-        /* background-color: green; */
-        /* margin-top: 10%; */
         font-size: 10px;
         flex-direction: column; /* Alinha os botões verticalmente */
         align-items: center; /* Centraliza os botões horizontalmente */
@@ -410,6 +409,95 @@ body.dark-mode .rodape{
     }   
 }
 
+/* Estilos para telas de tablet */
+@media screen and (min-width: 801px) and (max-width: 1024px) {
+       
+    .main_container{
+        padding: 1% 5%; /* Reduz o padding nas laterais */
+        flex-direction: column; /* Altera a direção do flex para coluna */
+        align-items: center; /* Centraliza os itens verticalmente */
+    }
+
+    .cabecalho{
+        flex-direction: column; /* Altera a direção do flex para coluna */
+        align-items: center; /* Centraliza os itens verticalmente */
+    }
+
+    .cabecalho img{
+        margin-bottom: 10px; /* Adiciona um espaçamento abaixo da imagem */
+    }
+
+    .container_input{
+        width: 100%; /* Ajusta a largura */
+        padding: 1% 5%; /* Adapta o padding para tela menor */
+    }
+
+    .container_input .input{
+        width: 100%; /* Ajusta a largura */
+        height: auto; /* Ajusta a altura automaticamente */
+    }
+
+    #input_texto{
+        width: 90%; /* Ajusta a largura */
+        height: 95%; /* Ajusta a altura automaticamente */
+        font-size: 16px; /* Reduz o tamanho da fonte */
+        padding: 15px; /* Ajusta o padding */
+    }
+
+    #output{
+        width: 95%; /* Ajusta a largura */
+        height: auto; /* Ajusta a altura automaticamente */
+        padding: 15px; /* Ajusta o padding */
+        margin-top: 160px;
+    }
+
+    #output_text {
+        width: 100%; /* Ajusta a largura para ocupar toda a largura disponível */
+        min-height: 120px; /* Ajusta a altura mínima */
+        max-height: 120px; /* Ajusta a altura máxima */
+        font-size: 16px; /* Mantém o tamanho da fonte */
+        padding: 15px; /* Ajusta o padding */
+    }
+
+    #output .image-container {
+        position: relative; /* Mantém a posição relativa para posicionar a imagem */
+        width: 100%; /* 100% da largura da div pai */
+        height: auto; /* Altura automática para manter a proporção */
+        text-align: center; /* Centraliza a imagem horizontalmente */
+    }
+
+    .buttons{
+        font-size: 10px;
+        flex-direction: column; /* Alinha os botões verticalmente */
+        align-items: center; /* Centraliza os botões horizontalmente */
+    }
+
+    .buttons_2{
+        position: static; /*Remove a posição absoluta */
+        margin-top: 20px; /* Ajusta a margem */
+        margin-left: 85px;
+    }
+
+    .container_btn button{
+        width: 40%; /* Ajusta a largura */
+        height: 50px;
+        margin: 10px 2px; /* Ajusta a margem */
+        margin-left: 265px;
+    }
+
+    .container_btn2 button{
+        width: 180%; /* Ajusta a largura */
+        height: 50px;
+        margin: 9px 2px; /* Ajusta a margem */
+        margin-right: 30px;
+    }
+
+    .rodape{
+        margin-top: 30px; /* Ajusta a margem */
+        font-size: 20px; /* Reduz o tamanho da fonte */
+    }  
+}
+
 /* Estilos para telas de monitor TV */
 @media screen and (min-width: 1441px) {
     .main_container {
@@ -422,7 +510,7 @@ body.dark-mode .rodape{
     }
 
     .container_input .input{
-        width: 430px;
+        width: 440px;
         height: 515px;
     }
 
@@ -445,7 +533,7 @@ body.dark-mode .rodape{
     }
 
     .buttons{
-        margin-left: 45px;
+        margin-left: 65px;
     }
 
     .container_btn button{
