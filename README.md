@@ -32,6 +32,10 @@ O input da aplicação não permite a utilização de letras maiúsculas e letra
 3. **Visualize o Resultado**: O texto criptografado ou descriptografado será exibido na área de saída.
 4. **Modo Dark**: Utilize o botão de alternar para mudar entre o modo claro e escuro da aplicação.
 
+## Demo
+
+Acesse a aplicação em: [Decodificador GitHub Pages](https://veronicacasanova.github.io/decodificador_de_texto/)
+
 ## Desenvolvedora
 Veronica Casanova  
 [GitHub](https://github.com/VeronicaCasanova) | [LinkedIn](https://www.linkedin.com/in/veronicacasanova/)
