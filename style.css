@@ -478,10 +478,10 @@ body.dark-mode .rodape{
     }
 
     .container_btn button{
-        width: 40%; /* Ajusta a largura */
+        width: 50%; /* Ajusta a largura */
         height: 50px;
         margin: 10px 2px; /* Ajusta a margem */
-        margin-left: 265px;
+        margin-left: 175px;
     }
 
     .container_btn2 button{
