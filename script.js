@@ -78,7 +78,7 @@ function updateOutput(text) {
 
 // Função para limpar imagens
 function clearImages() {
-    imageContainer.innerHTML = '';   
+    imageContainer.style.display = 'none';  // Esconde a imagem  
 }
 
 // Função para restaurar a imagem
@@ -86,16 +86,16 @@ function restoreImages() {
     var body = document.body;
     var imagePath = body.classList.contains("dark-mode") ? "assets/Cheshire_dark.png" : "assets/Cheshire_animado.gif";
     imageContainer.innerHTML = `<img id="image" src="${imagePath}" alt="cheshire">`;
-    
+    imageContainer.style.display = 'block';  
+
     var imagePath2 = body.classList.contains("dark-mode") ? "assets/decodificador_dark.png" : "assets/decodificador.png";
     imageContainer2.innerHTML = `<img id="image2" src="${imagePath2}" alt="decodificador">`;
+    imageContainer2.style.display = 'block';  
 }
 
-// // Função para alternar o modo escuro
+// Função para alternar o modo escuro
 function toggleDarkMode() {
     var body = document.body;
-    // var image = document.getElementById("image");
-    // var image2 = document.getElementById("image2");
     var switchElement = document.querySelector(".switch input");
 
     if (switchElement.checked) {
@@ -104,6 +104,23 @@ function toggleDarkMode() {
         body.classList.remove("dark-mode");
     }
 
-    restoreImages();  
+    updateImages(); // Atualiza as imagens após mudar o modo
 }
 
+// Função para atualizar as imagens
+function updateImages() {
+    var body = document.body;
+    var imagePath = body.classList.contains("dark-mode") ? "assets/Cheshire_dark.png" : "assets/Cheshire_animado.gif";
+    var imagePath2 = body.classList.contains("dark-mode") ? "assets/decodificador_dark.png" : "assets/decodificador.png";
+
+    imageContainer.innerHTML = `<img id="image" src="${imagePath}" alt="cheshire">`;
+    imageContainer2.innerHTML = `<img id="image2" src="${imagePath2}" alt="decodificador">`;
+
+    if (outputDiv.textContent.trim() === '') {
+        imageContainer.style.display = 'block';
+        imageContainer2.style.display = 'block';
+    } else {
+        imageContainer.style.display = 'none';
+        imageContainer2.style.display = 'block';
+    }
+}
