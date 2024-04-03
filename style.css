@@ -322,8 +322,8 @@ body.dark-mode .rodape{
 
 /*Media queries para tornar o projeto responsivo e adaptável a diferentes tamanhos de tela*/
 
-/* Estilos para telas pequenas (celulares) */
-@media screen and (max-width: 768px) {
+/* Estilos para telas pequenas */
+@media screen and (max-width: 800px) {
     
     .main_container{
         padding: 1% 5%; /* Reduz o padding nas laterais */
@@ -410,4 +410,56 @@ body.dark-mode .rodape{
     }   
 }
 
+/* Estilos para telas de monitor TV */
+@media screen and (min-width: 1441px) {
+    .main_container {
+        padding: 1% 20%; /* Reduz o padding nas laterais */
+        gap: 10px;
+    }
 
+    .container_input {
+        padding: 2% 0 0 10%; /* Ajusta o padding */
+    }
+
+    .container_input .input{
+        width: 430px;
+        height: 515px;
+    }
+
+    #input_texto {
+        width: 360px; /* Ajusta a largura */
+        height: 458px; /* Ajusta a altura */
+        font-size: 22px; /* Ajusta o tamanho da fonte */
+        padding: 30px; /* Ajusta o padding */
+    }
+
+    #output {
+        width: 590px; /* Ajusta a largura */
+        height: 569px; /* Ajusta a altura */
+        margin-top: 10px; /* Ajusta a margem superior */
+    }
+
+    #output_text {
+        font-size: 22px; /* Ajusta o tamanho da fonte */
+        padding: 60px; /* Ajusta o padding */
+    }
+
+    .buttons{
+        margin-left: 45px;
+    }
+
+    .container_btn button{
+        margin: 14px 12px; /* Ajusta a margem */
+    }
+
+
+    .buttons_2{
+        margin-left: -65px; 
+        margin-bottom: 4px;
+    }
+
+    .rodape{
+        margin-top: 50px; /* Ajusta a margem */
+        padding: 1.3%;
+    }   
+}
