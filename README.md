@@ -1,6 +1,6 @@
 # Decodificador de texto em JavaScript
 
-Projeto desafiado pelo curso da Alura, o "Decodificador" é uma aplicação web que permite ao usuário criptografar e descriptografar textos. A ferramenta foi desenvolvida utilizando as seguintes tecnologias:
+Projeto desafiado pela Alura Oracle ONE, o "Decodificador" é uma aplicação web que permite ao usuário criptografar e descriptografar textos. A ferramenta foi desenvolvida utilizando as seguintes tecnologias:
 
 ## Ferramentas Utilizadas
 
@@ -38,4 +38,4 @@ Veronica Casanova
 
 ---
 
-Este projeto foi desenvolvido como parte do desafio proposto pelo curso da Alura. Sinta-se à vontade para explorar, testar e contribuir com o código!
+Este projeto foi desenvolvido como parte do desafio proposto pela Alura + Oracle. Sinta-se à vontade para explorar, testar e contribuir com o código!
