@@ -7,7 +7,6 @@
     --cor_primaria: rgb(70, 223, 243);
     --cor_secundaria: rgb(238, 148, 230);
     --cor_titulo: rgb(3, 56, 70);
-    --cor_darkmode_texto: #ffffff;
 }
 
 body{
@@ -181,7 +180,7 @@ body.dark-mode .rodape{
 .input {
     background-color: #fff; /* Cor de fundo do input padrão */
     color: #000; /* Cor do texto do input padrão */
-    transition: background-color 0.5s, color 0.5s; /* Transição suave */  
+    transition: background-color 0.3s, color 0.3s; /* Transição suave */  
     border: 3px solid var(--cor_titulo); /* Adiciona uma borda semelhante à do output */
     border-radius: 20px; /* Arredonda as bordas */
     padding: 20px; /* Espaçamento interno */
@@ -324,7 +323,7 @@ body.dark-mode .rodape{
 /*Media queries para tornar o projeto responsivo e adaptável a diferentes tamanhos de tela*/
 
 /* Estilos para telas pequenas */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 767px) {
     
     .main_container{
         padding: 1% 5%; /* Reduz o padding nas laterais */
@@ -410,7 +409,7 @@ body.dark-mode .rodape{
 }
 
 /* Estilos para telas de tablet */
-@media screen and (min-width: 801px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
        
     .main_container{
         padding: 1% 5%; /* Reduz o padding nas laterais */
