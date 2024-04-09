@@ -1,6 +1,6 @@
 # Decodificador de texto em JavaScript
 
-Projeto desafiado pela Alura Oracle ONE, o "Decodificador" é uma aplicação web que permite ao usuário criptografar e descriptografar textos. A ferramenta foi desenvolvida utilizando as seguintes tecnologias:
+Projeto desafiado pela [Alura](https://github.com/alura-cursos) Oracle ONE, o "Decodificador" é uma aplicação web que permite ao usuário criptografar e descriptografar textos. A ferramenta foi desenvolvida utilizando as seguintes tecnologias:
 
 ## Ferramentas Utilizadas
 
