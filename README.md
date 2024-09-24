@@ -36,10 +36,6 @@ O input da aplicação não permite a utilização de letras maiúsculas e letra
 
 Acesse a aplicação em: [Decodificador GitHub Pages](https://veronicacasanova.github.io/decodificador_de_texto/)
 
-## Desenvolvedora
-Veronica Casanova  
-[GitHub](https://github.com/VeronicaCasanova) | [LinkedIn](https://www.linkedin.com/in/veronicacasanova/)
-
 ---
 
 Este projeto foi desenvolvido como parte do desafio proposto pela Alura + Oracle. Sinta-se à vontade para explorar, testar e contribuir com o código!
